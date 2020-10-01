@@ -1,26 +1,52 @@
 import React from 'react';
-import logo from './logo.svg';
+import {BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import Container from 'react-bootstrap/Container';
+import NavBar from 'react-bootstrap/Navbar';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Hello World <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  
+  constructor(props){
+    super(props);
+    this.state = {
+      title: 'benjamin charles',
+      headerLinks: [
+        {title: 'Home', path: '/'},
+        {title: 'Articles', path: '/articles'},
+        {title: 'Portfolio', path: '/portfolio'},
+        {title: 'About', path: '/about'},
+        {title: 'Contact', path: '/contact'}
+      ],
+      home: {
+        title: 'Some title',
+        subTitle: 'Subtitle here',
+        flavorText: 'flavor here'
+      },
+      about: {
+        title: 'About Me'
+      },
+      article: {
+        title: 'writings'
+      },
+      portfolio: {
+        title: 'in progress and in action'
+      },
+      contact: {
+        title: 'reach me'
+      }
+    }
+  }
+  render() {
+    return (
+      <Router>
+       <Container className="p-3" fluid={true}>
+         <NavBar className="border-bottom">
+          <NavBar.Brand>benjamin charles</NavBar.Brand>
+         </NavBar>
+       </Container>
+      </Router>
+      );
+    }
 }
 
 export default App;
