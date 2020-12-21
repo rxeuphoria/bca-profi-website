@@ -14,7 +14,7 @@ import PortfolioPage from './pages/PortfolioPage';
 
 
 class App extends React.Component {
-  
+
   constructor(props){
     super(props);
     this.state = {
@@ -27,9 +27,9 @@ class App extends React.Component {
         {title: 'Contact', path: '/contact'}
       ],
       home: {
-        title: 'Some title',
-        subTitle: 'Subtitle here',
-        flavorText: 'flavor here'
+        title: 'the Portfolio',
+        subTitle: 'projects for personal use',
+        flavorText: '(mostly complete.)'
       },
       about: {
         title: 'About Me'
@@ -49,8 +49,8 @@ class App extends React.Component {
     return (
       <Router>
        <Container className="p-3" fluid={true}>
-         <NavBar className="border-bottom" bg="transparent" expand="lg">
-          <NavBar.Brand>benjamin charles</NavBar.Brand>
+         <NavBar className="border-bottom" variant="light" bg="transparent" expand="lg">
+          <NavBar.Brand><b>benjamin charles</b></NavBar.Brand>
           <NavBar.Toggle className="border-0" aria-controls="navbar-toggle" />
           <NavBar.Collapse id="navbar-toggle">
             <Nav className="ml-auto">
@@ -62,7 +62,7 @@ class App extends React.Component {
             </Nav>
           </NavBar.Collapse>
          </NavBar>
-         <Route path="/" exact render={() => <HomePage title={this.state.home.title}/>} subTitle={this.state.home.subTitle} flavorText={this.state.home.flavorText}/>
+         <Route path="/" exact render={() => <HomePage title={this.state.home.title} subTitle={this.state.home.subTitle} flavorText={this.state.home.flavorText} />} />
          <Route path="/articles" exact render={() => <ArticlePage title={this.state.article.title}/>}/>
          <Route path="/portfolio" exact render={() => <PortfolioPage title={this.state.portfolio.title}/>} />
          <Route path="/about" exact render={() => <AboutPage title={this.state.about.title}/>}/>
