@@ -9,7 +9,6 @@ function AboutPage (props){
         <BigTitle title= {props.title} subTitle={props.subTitle} flavorText={props.flavorText} />
         </div>
     );
-
 }
 
 export default AboutPage;
