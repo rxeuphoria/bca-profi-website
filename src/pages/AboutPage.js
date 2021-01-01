@@ -1,12 +1,15 @@
 import React from 'react';
 
+import BigTitle from '../components/BigTitle';
 
 function AboutPage (props){
 
     return(
-        <p>About page</p>
+        <div>
+        <BigTitle title= {props.title} subTitle={props.subTitle} flavorText={props.flavorText} />
+        </div>
     );
 
-};
+}
 
 export default AboutPage;

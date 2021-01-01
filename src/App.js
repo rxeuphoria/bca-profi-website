@@ -32,7 +32,9 @@ class App extends React.Component {
         flavorText: '(mostly complete.)'
       },
       about: {
-        title: 'About Me'
+        title: 'Aspiring software dev.',
+        subTitle: 'unsatisfied Doctor of Pharmacy to happy bootcamp grad.',
+        flavorText: '(broke out of the golden handcuffs.)'
       },
       article: {
         title: 'writings'
@@ -65,7 +67,7 @@ class App extends React.Component {
          <Route path="/" exact render={() => <HomePage title={this.state.home.title} subTitle={this.state.home.subTitle} flavorText={this.state.home.flavorText} />} />
          <Route path="/articles" exact render={() => <ArticlePage title={this.state.article.title}/>}/>
          <Route path="/portfolio" exact render={() => <PortfolioPage title={this.state.portfolio.title}/>} />
-         <Route path="/about" exact render={() => <AboutPage title={this.state.about.title}/>}/>
+         <Route path="/about" exact render={() => <AboutPage title={this.state.about.title} subTitle={this.state.about.subTitle} flavorText={this.state.about.flavorText} />} />
          <Route path="/contact" exact render={() => <ContactPage title={this.state.contact.title}/>}/>
          <Footer />
        </Container>
