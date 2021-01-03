@@ -32,9 +32,9 @@ class App extends React.Component {
         flavorText: '(mostly complete.)'
       },
       about: {
-        title: 'Aspiring software dev.',
-        subTitle: 'unsatisfied Doctor of Pharmacy to happy bootcamp grad.',
-        flavorText: '(broke out of the golden handcuffs.)'
+        title: 'aspiring software dev',
+        subTitle: 'buckle up. it\'s a long story.',
+        flavorText: '(jk no it\'s not)'
       },
       article: {
         title: 'writings'

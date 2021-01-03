@@ -4,12 +4,15 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
+import {CSSTransition} from 'react-transition-group';
+
 
 
 function BigTitle(props) {
 
     return (
-        <Jumbotron className="bg-transparent jumbotron-fluid p-0">
+        <CSSTransition in={true} timeout={600} classNames="fade">
+        <Jumbotron className="bg-transparent jumbotron-fluid p-0 fade-appear">
             <Container fluid={true}>
                 <Row className="justify-content-center py-5">
                     <Col md={8} sm={12}>
@@ -19,8 +22,8 @@ function BigTitle(props) {
                     </Col>
                 </Row>
             </Container>
-
         </Jumbotron>
+        </CSSTransition>
     );
 }
 
